@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>STL ONLINE</title>
+
+
+  <!-- Favicons -->
+  <!-- <link href="{% static 'assets/img/favicon.png' %}" rel="icon"> -->
+  <!-- <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet'">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+
+  <style>
+    .card{
+      border:0px !important;
+    }
+    .portfolio .portfolio-wrap {
+      box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1) !important;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <section id="topbar" class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-6 pt-3">
+          <h1>STL ONLINE</h1>
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-block pt-3 ">
+          <form class="search-form">
+            <input class="form-control" type="search" placeholder="Search...">
+            <button type="submit">Search</button>
+          </form>
+        </div>
+
+        <div class="col-lg-2 col-6 pt-4 text-center" style="font-size: 15px; ">
+          {% if user.first_name %}
+          {{ user.first_name }}|
+          <a class="anchor" href="../logout/" style="color: white; ">logout</a>
+          {% else %}
+          <a class="anchor" href="../signup/" style="color: white;">Sign Up</a>|
+          <a class="anchor" href="../signin/" style="color: white; ">Sign In</a>
+          {% endif %}
+        </div>
+        
+      </div>
+      <!-- <div class="contact-info d-flex align-items-center">
+        <h1>STL ONLINE</h1>
+        <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+      </div>
+      <div class="social-links d-none d-md-flex align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div> -->
+    </div>
+  </section><!-- End Top Bar -->
+
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="dropdown"><a href="#">Men</a>
+            <ul>
+              <li><a href="#">Sweatshirts</a></li>
+              <li><a href="#">Casual Shirts</a>
+              </li>
+              <li><a href="#">Formal Shirts</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#">Women</a>
+            <ul>
+              <li><a href="#">Sweatshirt</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Dresses & Jumpsuits</a></li>
+              <li><a href="#">Jeans & Jeggings</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Fusion Dresses</a></li>
+              <li><a href="#">Sportswear</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#">Kids</a>
+            <ul>
+              <li><a href="#">Sweatshirt & <br> Shirts</a></li>
+              <li><a href="#">Jackets</a></li>
+              <li><a href="#">Bottoms</a></li>
+              <li><a href="#">Sportswear</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="healthy-food/">Healthy Food</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+
+    </div>
+  </header>
+  <!--End Header-->
+
+  {% block page_content %}
+  {% endblock %}
+
+
+</body>
+
+</html>
